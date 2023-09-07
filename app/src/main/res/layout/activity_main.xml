@@ -56,7 +56,8 @@
         android:layout_marginTop="60dp"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
+        android:textSize="@dimen/buttonFont"/>
 
     <Button
         android:id="@+id/button5"
