@@ -7,6 +7,24 @@
     android:background="@color/md_theme_dark_onSurface"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/InputEditText"
+        android:layout_width="377dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:background="@color/md_theme_dark_secondaryContainer"
+        android:backgroundTint="@color/md_theme_dark_secondary"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="right"
+        android:includeFontPadding="true"
+        android:inputType="text|textMultiLine"
+        android:textSize="20sp"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button1"
         style="@style/NattamiButtons"
@@ -45,25 +63,50 @@
         app:layout_constraintTop_toTopOf="@+id/button1" />
 
 
-
     <Button
         android:id="@+id/button5"
         style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:text="2"
+        android:layout_marginTop="92dp"
+        android:text="5"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="@+id/button2" />
 
+    <Button
+        android:id="@+id/button6"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="92dp"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <Button
         android:id="@+id/button7"
         style="@style/NattamiButtons"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:text="6"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="184dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="184dp"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="184dp"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <Button
         android:id="@+id/divideButton"
@@ -74,33 +117,15 @@
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
 
+
     <Button
         android:id="@+id/multiplyButton"
         style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="92dp"
         android:text="X"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/divideButton" />
-
-    <EditText
-        android:id="@+id/InputEditText"
-        android:layout_width="377dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
-        android:background="@color/md_theme_dark_secondaryContainer"
-        android:backgroundTint="@color/md_theme_dark_secondary"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed-light"
-        android:gravity="right"
-        android:includeFontPadding="true"
-        android:inputType="text|textMultiLine"
-        android:textSize="20sp"
-        android:typeface="sans"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/divideButton" />
 
     <Button
         android:id="@+id/sinButton"
@@ -108,6 +133,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
+        android:padding="@dimen/functionButtonPadding"
         android:backgroundTint="@color/md_theme_dark_primaryContainer"
         android:text="Sin"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,12 +143,13 @@
         android:id="@+id/cosButton"
         android:layout_width="124dp"
         android:layout_height="56dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="88dp"
         android:backgroundTint="@color/md_theme_dark_primaryContainer"
+        android:padding="@dimen/functionButtonPadding"
         android:text="Cos"
-        app:layout_constraintStart_toEndOf="@+id/sinButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InputEditText" />
 
     <Button
         android:id="@+id/tanButton"
@@ -130,9 +157,11 @@
         android:layout_height="56dp"
         android:layout_marginStart="128dp"
         android:layout_marginTop="4dp"
+        android:padding="@dimen/functionButtonPadding"
         android:backgroundTint="@color/md_theme_dark_primaryContainer"
         android:text="Tan"
         app:layout_constraintStart_toEndOf="@+id/sinButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />/>
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

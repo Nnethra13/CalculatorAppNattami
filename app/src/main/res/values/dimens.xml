@@ -3,4 +3,5 @@
     <dimen name ="buttonTextSize">30sp</dimen>
     <dimen name="buttonPadding">10dp</dimen>
     <dimen name="buttonMargin">12dp</dimen>
+    <dimen name="functionButtonPadding">0dp</dimen>
 </resources>
