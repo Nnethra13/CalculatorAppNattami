@@ -32,5 +32,19 @@
 
     </style>
 
-    <style name="Theme.CalculatorAppNattami" parent="Base.Theme.CalculatorAppNattami" />
+    <style name="NattamiButtons" parent = "Widget.Material3.Button">
+        <item name="android:padding">@dimen/buttonPadding</item>
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_marginStart">@dimen/buttonMargin</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+
+
+
+    </style>
+
+
+
+
 </resources>
+<!--<style name="Theme.CalculatorAppNattami" parent="Base.Theme.CalculatorAppNattami" /> -->

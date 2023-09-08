@@ -4,34 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_theme_dark_onPrimaryContainer"
+    android:background="@color/md_theme_dark_onSurface"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="12dp"
-        android:text="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
-        app:layout_constraintVertical_bias="0.134" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        android:id="@+id/button1"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:text="2"
@@ -39,54 +26,60 @@
         app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        android:id="@+id/button3"
+        style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/InputEditText"
-        android:textSize="@dimen/buttonFont"/>
+        app:layout_constraintVertical_bias="0.122" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        android:id="@+id/button4"
+        style="@style/NattamiButtons"
         android:layout_marginStart="8dp"
         android:layout_marginTop="92dp"
-        android:text="1"
+        android:text="4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button1" />
 
+
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/NattamiButtons"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
     <Button
         android:id="@+id/divideButton"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:text="/"
-        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
 
     <Button
-        android:id="@+id/button8"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        android:id="@+id/multiplyButton"
+        style="@style/NattamiButtons"
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
-        android:text="4"
+        android:text="X"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/divideButton" />
 
@@ -115,29 +108,31 @@
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
+        android:backgroundTint="@color/md_theme_dark_primaryContainer"
         android:text="Sin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer"/>
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+
     <Button
         android:id="@+id/cosButton"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:backgroundTint="@color/md_theme_dark_primaryContainer"
         android:text="Cos"
         app:layout_constraintStart_toEndOf="@+id/sinButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer" />
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+
     <Button
         android:id="@+id/tanButton"
         android:layout_width="124dp"
         android:layout_height="56dp"
         android:layout_marginStart="128dp"
         android:layout_marginTop="4dp"
-        android:text="Button"
+        android:backgroundTint="@color/md_theme_dark_primaryContainer"
+        android:text="Tan"
         app:layout_constraintStart_toEndOf="@+id/sinButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer"/>/>
+        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
