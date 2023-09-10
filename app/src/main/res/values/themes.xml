@@ -38,10 +38,10 @@
         <item name="android:layout_height">85dp</item>
         <item name="android:layout_marginStart">@dimen/buttonMargin</item>
         <item name="android:textSize">@dimen/buttonTextSize</item>
-
-
-
+        <item name="android:fontFamily"></item>
     </style>
+
+
 
 
 
