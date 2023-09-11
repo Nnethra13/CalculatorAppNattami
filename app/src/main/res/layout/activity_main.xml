@@ -52,6 +52,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:text="1"
+        android:onClick="buttonSelect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1" />
 
@@ -200,9 +201,10 @@
         android:layout_width="159dp"
         android:layout_height="72dp"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="480dp"
         android:backgroundTint="@color/md_theme_dark_primaryContainer"
         android:fontFamily="sans-serif-smallcaps"
+        android:onClick="displayAns"
         android:padding="@dimen/functionButtonPadding"
         android:text="Enter/="
         android:textSize="30sp"
@@ -235,7 +237,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/anwerTextView"
+        android:id="@+id/answerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"

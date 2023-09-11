@@ -2,13 +2,18 @@ package com.example.calculatorappnattami;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+
+    int numInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,18 +21,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
     }
 
+    public void displayAns(){
+//        Intent intent = new Intent(this, MainActivity.class);
+//        intent.putExtra("ANSWER", 5);
+//        String answer = intent.getDataString();
+
+        TextView answerOutput = findViewById(R.id.answerTextView);
+        answerOutput.setText("hi");
+
+    }
+
     @Override
     public void onClick(View v){
 
     }
     public void getInputs(View v) {
-        // reference to EditText's by locating its elements in the xml file
-        // then convert to string then integer
+
 
         Button buttonAdd = findViewById(R.id.addButton);
         Button buttonSubtract = findViewById(R.id.subtractButton);
         Button buttonDivide = findViewById(R.id.divideButton);
         Button buttonMultiply = findViewById(R.id.multiplyButton);
+        Button buttonDecimal = findViewById(R.id.decimalButton);
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
@@ -40,9 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
-
-
+        // reference to EditText's by locating its elements in the xml file
+        // then convert to string then integer
 
         // input 1
         EditText userInputEt1 = findViewById(R.id.inputEditNumberDecimal1);
@@ -62,36 +76,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void buttonSelect(View v){
-        int numInput;
-        if(v.getId() == R.id.button1){
+    public void buttonSelect(Button b){
+        if(b.getId() == R.id.button1){
             numInput = 1;
         }
-        else if(v.getId() == R.id.button2){
+        else if(b.getId() == R.id.button2){
             numInput = 2;
         }
-        else if(v.getId() == R.id.button3){
+        else if(b.getId() == R.id.button3){
             numInput = 3;
         }
-        else if(v.getId() == R.id.button4){
+        else if(b.getId() == R.id.button4){
             numInput = 4;
         }
-        else if(v.getId() == R.id.button5){
+        else if(b.getId() == R.id.button5){
             numInput = 5;
         }
-        else if(v.getId() == R.id.button6){
+        else if(b.getId() == R.id.button6){
             numInput = 6;
         }
-        else if(v.getId() == R.id.button7){
+        else if(b.getId() == R.id.button7){
             numInput = 7;
         }
-        else if(v.getId() == R.id.button8){
+        else if(b.getId() == R.id.button8){
             numInput = 8;
         }
-        else if(v.getId() == R.id.button9){
+        else if(b.getId() == R.id.button9){
             numInput = 9;
         }
-        else if(v.getId() == R.id.button0){
+        else if(b.getId() == R.id.button0){
             numInput = 0;
         }
     }
