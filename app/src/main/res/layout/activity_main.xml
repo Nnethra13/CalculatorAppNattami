@@ -7,20 +7,41 @@
     android:background="@color/md_theme_dark_onSurface"
     tools:context=".MainActivity">
 
+
     <EditText
-        android:id="@+id/InputEditText"
-        android:layout_width="372dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
+        android:id="@+id/inputEditNumberDecimal1"
+        android:layout_width="131dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="132dp"
         android:background="@color/md_theme_dark_secondaryContainer"
         android:backgroundTint="@color/md_theme_dark_secondary"
         android:ems="10"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="right"
+        android:hint="input 1"
         android:includeFontPadding="true"
-        android:inputType="text|textMultiLine"
-        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:textSize="48sp"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputEditNumberDecimal2"
+        android:layout_width="131dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="132dp"
+        android:background="@color/md_theme_dark_secondaryContainer"
+        android:backgroundTint="@color/md_theme_dark_secondary"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="right"
+        android:hint="input 2"
+        android:includeFontPadding="true"
+        android:inputType="numberDecimal"
+        android:textSize="48sp"
         android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +53,7 @@
         android:layout_marginTop="76dp"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1" />
 
     <Button
         android:id="@+id/button2"
@@ -41,7 +62,7 @@
         android:layout_marginTop="76dp"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1" />
 
 
     <Button
@@ -51,7 +72,7 @@
         android:text="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1"
         app:layout_constraintVertical_bias="0.158" />
 
     <Button
@@ -109,7 +130,7 @@
         app:layout_constraintTop_toTopOf="@+id/button2" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/button8"
         style="@style/NattamiButtons"
         android:layout_marginStart="104dp"
         android:layout_marginTop="204dp"
@@ -128,7 +149,7 @@
         app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button9"
         style="@style/NattamiButtons"
         android:layout_marginStart="200dp"
         android:layout_marginTop="204dp"
@@ -143,7 +164,7 @@
         android:layout_marginTop="76dp"
         android:text="/"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1" />
 
     <Button
         android:id="@+id/multiplyButton"
@@ -157,59 +178,22 @@
     <Button
         android:id="@+id/addButton"
         style="@style/NattamiButtons"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="204dp"
         android:text="+"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="@+id/tanButton" />
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="@+id/divideButton" />
 
     <Button
         android:id="@+id/subtractButton"
         style="@style/NattamiButtons"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="468dp"
+        android:layout_width="84dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="312dp"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/clearTextButton"
-        app:layout_constraintTop_toTopOf="@+id/InputEditText" />
-
-    <Button
-        android:id="@+id/sinButton"
-        android:layout_width="124dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:padding="@dimen/functionButtonPadding"
-        android:text="Sin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
-
-    <Button
-        android:id="@+id/cosButton"
-        android:layout_width="124dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="92dp"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:padding="@dimen/functionButtonPadding"
-        android:text="Cos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/InputEditText" />
-
-    <Button
-        android:id="@+id/tanButton"
-        android:layout_width="124dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/md_theme_dark_primaryContainer"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:padding="@dimen/functionButtonPadding"
-        android:text="Tan"
-        app:layout_constraintStart_toEndOf="@+id/sinButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toTopOf="@+id/divideButton" />
 
     <Button
         android:id="@+id/enterButton"
@@ -223,18 +207,43 @@
         android:text="Enter/="
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEditNumberDecimal1" />
 
     <TextView
-        android:layout_width="288dp"
-        android:layout_height="102dp"
+        android:id="@+id/textView4"
+        android:layout_width="311dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="casual"
         android:text="Calculator"
         android:textAlignment="center"
         android:textColor="#673AB7"
-        android:textSize="60sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="monospace"
+        android:text="Input a number in the input 1 space then another number in the input 2 space using the number buttons. Then choose an operation and hit enter to solve."
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/anwerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="240dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
