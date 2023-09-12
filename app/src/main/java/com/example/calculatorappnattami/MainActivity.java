@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         inputTV = findViewById(R.id.inputTextView);
         resultTV = findViewById(R.id.resultTextView);
         enterButton = findViewById(R.id.enterButton);
@@ -99,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void solve(){
         if(input.split("\\+").length == 2){
+            // refreshed on split method
             String numbers[] = input.split("\\+");
             try{
                 double dNum = Double.parseDouble(numbers[0]) + Double.parseDouble(numbers[1]);
@@ -112,24 +112,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-        if(input.split("\\-").length == 2){
+        if(input.split("\\-").length == 2) {
             String numbers[] = input.split("\\-");
-            try{
-                    double dNum = Double.parseDouble(numbers[0]) - Double.parseDouble(numbers[1]);
-                    output = Double.toString(dNum);
-                    resultTV.setText(input + " = " + output);
-                    input = dNum + "";
-                    inputTV.setText(input);
-            }
-            catch (Exception e){
-                resultTV.setError(e.getMessage().toString());
-            }
-        }
-
-        if(input.split("\\*").length == 2){
-            String numbers[] = input.split("\\*");
-            try{
-                double dNum = Double.parseDouble(numbers[0])*Double.parseDouble(numbers[1]);
+            try {
+                double dNum = Double.parseDouble(numbers[0]) - Double.parseDouble(numbers[1]);
                 output = Double.toString(dNum);
                 resultTV.setText(input + " = " + output);
                 input = dNum + "";
@@ -139,8 +125,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 resultTV.setError(e.getMessage().toString());
             }
         }
+
         if(input.split("\\*").length == 2){
-            String numbers[] = input.split("\\+");
+            String numbers[] = input.split("\\*");
             try{
                 double dNum = Double.parseDouble(numbers[0])*Double.parseDouble(numbers[1]);
                 output = Double.toString(dNum);
@@ -170,56 +157,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    //public void getInputs(View v) {
-        // reference to EditText's by locating its elements in the xml file
-        // then convert to string then integer
-
-        // input 1
-//        EditText userInputEt1 = findViewById(R.id.inputEditNumberDecimal1);
-//        double input1 = userInputEt1.getInputType();
-//
-//        // input 2
-//        EditText userInputEt2 = findViewById(R.id.inputEditNumberDecimal2);
-//        double input2 = userInputEt2.getInputType();
-
-        // don't forget to CALL this method with the onClick
-    //}
-
-
-
-//    public void buttonSelect(Button b){
-//        if(b.getId() == R.id.button1){
-//            numInput = 1;
-//        }
-//        else if(b.getId() == R.id.button2){
-//            numInput = 2;
-//        }
-//        else if(b.getId() == R.id.button3){
-//            numInput = 3;
-//        }
-//        else if(b.getId() == R.id.button4){
-//            numInput = 4;
-//        }
-//        else if(b.getId() == R.id.button5){
-//            numInput = 5;
-//        }
-//        else if(b.getId() == R.id.button6){
-//            numInput = 6;
-//        }
-//        else if(b.getId() == R.id.button7){
-//            numInput = 7;
-//        }
-//        else if(b.getId() == R.id.button8){
-//            numInput = 8;
-//        }
-//        else if(b.getId() == R.id.button9){
-//            numInput = 9;
-//        }
-//        else if(b.getId() == R.id.button0){
-//            numInput = 0;
-//        }
-//    }
-//
-//
-//
 }
