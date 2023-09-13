@@ -73,14 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // getting what button it is by getting the text on the button
         String buttonText = button.getText().toString();
 
-        // clear button
+        // clear button (for just inputTV)
         if(buttonText.equals("C")){
             inputTV.setText("");
             input = "";
             output = "";
         }
 
-        // all clear button (clears the box above with the prior equation as well)
+        // all clear button (clears the box above with the prior equation as well, inputTV and resultTV)
         else if(buttonText.equals("AC")){
             inputTV.setText("");
             resultTV.setText("");
