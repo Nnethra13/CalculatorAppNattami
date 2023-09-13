@@ -8,25 +8,6 @@
     tools:context=".MainActivity">
 
 
-    <!--<EditText
-        android:id="@+id/inputEditNumberDecimal1"
-        android:layout_width="131dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="132dp"
-        android:background="@color/md_theme_dark_secondaryContainer"
-        android:backgroundTint="@color/md_theme_dark_secondary"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed-light"
-        android:gravity="right"
-        android:hint="input 1"
-        android:includeFontPadding="true"
-        android:inputType="numberDecimal"
-        android:textSize="48sp"
-        android:typeface="sans"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /> -->
-
     <TextView
         android:id="@+id/inputTextView"
         android:layout_width="352dp"
@@ -47,7 +28,7 @@
         android:id="@+id/resultTextView"
         android:layout_width="352dp"
         android:layout_height="63dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="112dp"
         android:background="@color/md_theme_dark_secondaryContainer"
         android:backgroundTint="@color/md_theme_dark_secondary"
@@ -84,12 +65,13 @@
         android:id="@+id/button3"
         style="@style/NattamiButtons"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:onClick="onClick"
         android:text="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/inputTextView"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button4"
